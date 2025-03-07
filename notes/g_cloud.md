@@ -1,7 +1,24 @@
-### To get the files from your Google Cloud VM
-1. Install Google Cloud SDK
-2. Authenticate your Google Cloud account
+* Login to your G cloud account:
 ```
+gcloud auth login
+
+```
+
+* Set the active project
+```
+gcloud config set project your-project
+```
+* SSH into Your Google Cloud VM
+
+```
+ssh -i ~/.ssh/id_rsa your-user@your-vm-external-ip
+```
+<details>
+  <summary> <h2>Get the files from your Google Cloud VM </h2> </summary>
+  
+  1. Install Google Cloud SDK
+  2. Authenticate your Google Cloud account
+  ```
 gcloud auth login
 ```
 3. Identify the VM's External IP address:
@@ -15,3 +32,4 @@ gcloud auth login
 * Replace YOUR_VM_ZONE with your VM’s zone (e.g., us-central1-a).
 This will download all the files from /var/www/html on your VM to your local directory.
 
+</details>
